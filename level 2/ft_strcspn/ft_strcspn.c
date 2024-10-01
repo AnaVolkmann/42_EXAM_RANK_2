@@ -3,46 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 16:40:12 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 17:07:17 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 18:30:50 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 18:33:19 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 size_t	ft_strcspn(const char *s, const char *reject)
 {
-	int	i;
-	int	j;
+	int i = 0;
+	int j = 0;
 
-	i = 0;
-	while (s[i])
+	while(s[i])
 	{
-		j = 0;
 		while (reject[j])
 		{
 			if (s[i] == reject[j])
-				return(i);
+				return (i);
 			j++;
 		}
 		i++;
 	}
 	return (i);
 }
-/*#include <stdio.h>
-#include <string.h>
-
-int main () {
-   int len;
-   const char str1[] = "ioana";
-   const char str2[] = "ana";
-
-   len = ft_strcspn(str1, str2);
-
-   printf("First matched character is at %d\n", len + 1);
-
-   return(0);
-}*/

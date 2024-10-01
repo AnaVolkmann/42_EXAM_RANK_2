@@ -3,25 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   max.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 13:10:28 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/25 13:12:56 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 19:43:24 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 19:47:18 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	max(int* tab, unsigned int len)
+int	max(int *tab, unsigned int len)
 {
-	int	result;
-	int	i;
+	int i = 0;
+	int result = 0;
 
-	i = 0;
 	if (len == 0)
 		return (0);
 	result = tab[i];
-	while (i < len)
+	while(i < len)
 	{
-		if (result < tab[i])
+		if (tab[i] > result)
 			result = tab[i];
 		i++;
 	}

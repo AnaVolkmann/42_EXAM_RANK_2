@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   print_bits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 13:51:30 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/25 14:00:26 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 19:47:40 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 19:49:52 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	print_bits(unsigned char octet)
 {
-	int	i;
-	unsigned char bits;
+	unsigned char bit;
+	int i = 8;
 
-	i = 8;
-	while(i--)
+	while (i--)
 	{
-		((octat >> i) & 1) + '0'
-		write (1, &bits, 1);
+		bit = (octet >> i & 1) + 48;
+		write(1, &bit, 1);
 	}
 }

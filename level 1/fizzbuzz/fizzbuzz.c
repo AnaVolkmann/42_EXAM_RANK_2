@@ -3,37 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   fizzbuzz.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 11:13:14 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 11:30:49 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:13:14 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:20:56 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int i)
+void	put_nbr(int i)
 {
 	if (i > 9)
-		ft_putnbr(i/10);
-	write (1, &"0123456789"[i % 10], 1);
+		put_nbr(i / 10);
+	write(1, &"0123456789"[i % 10], 1);
 }
+
 int	main(void)
 {
-	int	i;
+	int i = 1;
 
-	i = 1;
-	while (i <= 100)
+	while(i <= 100)
 	{
-		if ((i % 5 == 0) && (i % 3 == 0))
-                        write (1, "fizzbuzz", 8 );
-		else if (i % 3 == 0)
-		 	write (1, "fizz", 4);
+		if ((i % 3 == 0) && (i % 5 == 0))
+			write(1, "fizzbuzz", 8);
 		else if (i % 5 == 0)
-			write (1, "buzz", 4);		
+			write(1, "buzz", 4);
+		else if (i % 3 == 0)
+			write(1, "fizz", 4);
 		else 
-			ft_putnbr(i);
+			put_nbr(i);
 		i++;
-		write (1, "\n", 1);
+		write(1, "\n", 1);
 	}
 }

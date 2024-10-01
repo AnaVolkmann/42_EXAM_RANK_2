@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 12:31:43 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 12:32:44 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:24:37 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:25:09 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	*ft_strlen(char *str)
+int	dt_strlen(char *str)
 {
-	int i;
-
-	i = 0;
+	int i = 0;
 	while (str[i])
+	{
 		i++;
+	}
 	return (i);
 }

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strpbrk.c                                       :+:      :+:    :+:   */
+/*   ft_strspn.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/22 14:14:35 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/22 14:26:23 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 18:57:43 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 19:06:41 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-char *ft_strpbrk(const char *s1, const char *s2)
-{
-	int i;
+#include <stdlib.h>
 
-	if (!s1 || !s2)
-		return (0);
-	while (*s1)
+size_t	ft_strspn(const char *s, const char *accept)
+{
+	int i = 0;
+
+	while(s[i])
 	{
-		i = 0;
-		while (s2[i])
+		int j = 0;
+		while(accept[j])
 		{
-			if (*s1 == s2[i])
-				return (char *)s1;
-			i++;
+			if (accept[j] == s[i])
+				break;
+			j++;
 		}
-		s1++;
+		if (!accept[j])
+			break;
+		i++;
 	}
-	return (NULL);
+	return (i);
 }

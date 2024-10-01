@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 12:33:48 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 12:36:55 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:25:23 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:26:27 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-	int	temp;
+	int temp;
 
 	temp = *a;
 	*a = *b;

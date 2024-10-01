@@ -3,26 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 11:01:36 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 11:12:44 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:00:44 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:12:32 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
+	unsigned int i = 0;
+
 	if (argc == 2)
 	{
-		unsigned int	i;
-
-		i = 0;
 		while ((argv[1][i] == 32) || (argv[1][i] == 9))
 			i++;
-		while ((argv[1][i] != 32) && (argv[1][i] != 9) && argv[1][i])
-			write (1, &argv[1][i++], 1);
-	}	
-	write (1, "\n", 1);
+		while((argv[1][i] && (argv[1][i] != 32) && (argv[1][i] != 9)))
+			write(1, &argv[1][i++], 1);
+	}
+	write(1, "\n", 1);
 }

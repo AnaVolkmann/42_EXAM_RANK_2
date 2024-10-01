@@ -3,26 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   rev_print.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 13:00:10 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 13:04:36 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:26:49 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:30:12 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+char *rev_print(char *str)
 {
-	int i;
-
-	if (argc == 2)
+    int i = 0;
+    while(str[i])
+        i++;
+	while (--i >= 0)
 	{
-		i = 0;
-		while (argv[1][i])
-			i++;
-		while (i)
-			write (1, &argv[1][--i], 1);
+		write(1, &str[i], 1);
 	}
 	write(1, "\n", 1);
+    return (str);
 }

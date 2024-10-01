@@ -6,7 +6,7 @@
 /*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 15:35:08 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/07/02 17:21:29 by ana-lda-         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:53:31 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,23 @@ int	ft_atoi_base(const char *str, int str_base)
     while ((str[i] == 32 || str[i] >= 9 && str[i] <= 13))
         i++;
     if (str[i] == '-')
+    {    
         neg = -1;
-    while ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 65 && str[i] <= 90))
+        i++;
+    }
+    while ((str[i] >= '0' && str[i] <= '9') || (str[i] >= 'a' && str[i] <= 'f') || (str[i] >= 'A' && str[i] <= 'F'))
     {
         res = (res * str_base) + find_index(str[i], str_base);
         i++;
     }
     return (res * neg);
 }
-/* #include <stdio.h>
+#include <stdio.h>
 
 int	main()
 {
-	const char *s = "26";
-	int size = 16;
+	const char *s = "-454526";
+	int size = 10;
 
 	printf("%i", ft_atoi_base(s, size));
-} */
+} 

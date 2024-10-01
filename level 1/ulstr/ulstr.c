@@ -3,28 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ulstr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 14:45:26 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 14:49:23 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:52:09 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:54:42 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	int	i;
-
 	if (argc == 2)
 	{
-		i = 0;
-		while (argv[1][i])
+		int i = 0;
+		while(argv[1][i])
 		{
-			if (argv[1][i] >= 65 && argv[1][i] <= 90)
-				argv[1][i] += 32;
-			else if (argv[1][i] >= 97 && argv[1][i] <= 122)
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
 				argv[1][i] -= 32;
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+				argv[1][i] += 32;
 			write(1, &argv[1][i], 1);
 			i++;
 		}

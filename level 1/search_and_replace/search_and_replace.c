@@ -3,29 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   search_and_replace.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 13:45:01 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 14:44:00 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 17:46:51 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 17:50:47 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	main(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	if (argc == 4 && !argv[2][1] && !argv[3][1])
+	if (argc == 4 && (!argv[2][1]) && (!argv[3][1]))
 	{
-		int i;
-
-		i = 0;
-		while (argv[1][i])
+		int i = 0;
+		while(argv[1][i])
 		{
 			if (argv[1][i] == argv[2][0])
 				argv[1][i] = argv[3][0];
-			write (1, &argv[1][i], 1);
+			write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
-	write (1, "\n", 1);
+	write(1, "\n", 1);
 }

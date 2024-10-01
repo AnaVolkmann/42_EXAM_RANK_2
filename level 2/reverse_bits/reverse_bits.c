@@ -3,24 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_bits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 14:06:20 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/25 14:09:27 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 19:50:15 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 19:56:51 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsignd char	reverse_bits(unsigned char octet)
+unsigned char reverse_bits(unsigned char octet)
 {
-	int	i; 
-	unsigned char bits;
+    int i = 8;
+    unsigned char bit;
 
-	i = 8;
-	while (i > 0)
-	{
-		bits = bits * 2 + (octet % 2);
-		octet = octet / 2;
-		i--;
-	}
-	return (bits);
+    while (i > 0)
+    {
+        bit = (bit * 2 + (octet % 2));
+        octet = octet / 2;
+        i--;
+    }
+    return (bit);
 }

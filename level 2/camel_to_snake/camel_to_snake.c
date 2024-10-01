@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camel_to_snake.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/20 15:14:00 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/20 15:33:11 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 18:04:25 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 18:10:19 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,16 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;
-
-	i = 0;
 	if (argc == 2)
 	{
-		while (argv[1][i])
+		int i = 0;
+		while(argv[1][i])
 		{
 			if (argv[1][i] >= 65 && argv[1][i] <= 90)
-			{
-				write (1, "_", 1);
-				argv[1][i] += 32;
-			}
+				write(1, "_", 1);
 			write(1, &argv[1][i], 1);
-                        i++;
+			i++;
 		}
 	}
-	write (1, "\n", 1);
-	return(0);
+	write(1, "\n", 1);
 }

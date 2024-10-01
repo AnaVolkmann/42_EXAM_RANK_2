@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   swap_bits.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ana-lda- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ana-lda- <ana-lda-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 14:12:41 by ana-lda-          #+#    #+#             */
-/*   Updated: 2024/06/25 14:14:43 by ana-lda-         ###   ########.fr       */
+/*   Created: 2024/10/01 20:05:23 by ana-lda-          #+#    #+#             */
+/*   Updated: 2024/10/01 20:06:29 by ana-lda-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned char	swap_bits(unsigned char octet)
+unsigned char swap_bits(unsigned char octet)
 {
-	return ((octet >> 4) | (octet << 4));
+	return((octet >> 4) | (octet << 4));
 }
